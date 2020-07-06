@@ -337,8 +337,66 @@ template {
   display: none;
 }
 
-#grid-container .card {
-  width: calc(100vw / 3);
+body {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #eee;
+}
+body #grid-container {
+  display: grid;
+  grid-template-columns: calc(100% / 3);
+  grid-template-rows: auto;
+  grid-template-areas: "card0 card1 card2" "card3 card4 card5" "card6 card7 card8" "card9 card10 card11";
+}
+body #grid-container .card0 {
+  grid-area: card0;
+}
+body #grid-container .card1 {
+  grid-area: card1;
+}
+body #grid-container .card2 {
+  grid-area: card2;
+}
+body #grid-container .card3 {
+  grid-area: card3;
+}
+body #grid-container .card4 {
+  grid-area: card4;
+}
+body #grid-container .card5 {
+  grid-area: card5;
+}
+body #grid-container .card6 {
+  grid-area: card6;
+}
+body #grid-container .card7 {
+  grid-area: card7;
+}
+body #grid-container .card8 {
+  grid-area: card8;
+}
+body #grid-container .card9 {
+  grid-area: card9;
+}
+body #grid-container .card10 {
+  grid-area: card10;
+}
+body #grid-container .card {
+  background-color: #fff;
+  border: solid 0.25em #bbb;
+  border-radius: 1em;
+  display: flex;
+  padding: 1em;
+  overflow: hidden;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+body #grid-container .card:nth-child(3n+3) {
+  margin-right: 0;
+}
+body #grid-container .card .avatar {
+  border-radius: 50%;
+  margin-right: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

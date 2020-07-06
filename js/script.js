@@ -33,6 +33,9 @@ function displayEmployees(employeeData){
         `;
     });
     gridContainer.innerHTML = employeeHTML;
+    for(let i=0; i<12; i++){
+        document.getElementsByClassName('card')[i].classList.add(`card${i}`);
+    }
 }
 
 function displayModal(index) {
