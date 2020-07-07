@@ -2,9 +2,12 @@
 
 body{
     position: relative;
-    width: 90%;
-    margin: 0 auto;
     background-color: #eee;
+    h1{
+        margin-left: calc(calc(100% / 3) * .05);
+        padding-top: 1em;
+        margin-top: 0;
+    }
     #grid-container {
         display: grid;
         @for $i from 0 to 11 {
@@ -27,8 +30,11 @@ body{
             margin-right: 1em;
             border: solid 0.25em #bbb;
             margin-bottom: 1em;
+            &:nth-child(3n + 1){
+                margin-left: 5%;
+            }
             &:nth-child(3n + 3){
-                margin-right: 0;
+                margin-right: 5%;
             }
             .avatar{
                 border-radius: 50%;
@@ -51,10 +57,13 @@ body{
             width: calc(100% / 3);
             margin: 0 auto;
             margin-top: 5em;
+            .modal-close{
+                float: right;
+            }
             .modal-content{
                 .avatar{
                     border-radius: 50%;
-                    margin: auto;
+                    margin-left: calc(50% - 4em);
                 }
                 .text-container{
                     text-align: center;

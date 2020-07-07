@@ -339,9 +339,12 @@ template {
 
 body {
   position: relative;
-  width: 90%;
-  margin: 0 auto;
   background-color: #eee;
+}
+body h1 {
+  margin-left: calc(calc(100% / 3) * .05);
+  padding-top: 1em;
+  margin-top: 0;
 }
 body #grid-container {
   display: grid;
@@ -392,8 +395,11 @@ body #grid-container .card {
   border: solid 0.25em #bbb;
   margin-bottom: 1em;
 }
+body #grid-container .card:nth-child(3n+1) {
+  margin-left: 5%;
+}
 body #grid-container .card:nth-child(3n+3) {
-  margin-right: 0;
+  margin-right: 5%;
 }
 body #grid-container .card .avatar {
   border-radius: 50%;
@@ -418,9 +424,12 @@ body .overlay .modal {
   margin: 0 auto;
   margin-top: 5em;
 }
+body .overlay .modal .modal-close {
+  float: right;
+}
 body .overlay .modal .modal-content .avatar {
   border-radius: 50%;
-  margin: auto;
+  margin-left: calc(50% - 4em);
 }
 body .overlay .modal .modal-content .text-container {
   text-align: center;

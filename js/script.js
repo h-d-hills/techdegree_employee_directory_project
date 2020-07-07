@@ -65,7 +65,6 @@ function displayModal(index) {
             <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
         </div>
     `;
-    console.log(modalHTML);
     overlay.classList.remove('hidden');
     modalContainer.innerHTML = modalHTML;    
 }
