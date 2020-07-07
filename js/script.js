@@ -5,6 +5,7 @@ const gridContainer = document.getElementById("grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
+let currentIndex = 0;
 
 fetch(urlAPI)
     .then(res => res.json())
@@ -56,7 +57,6 @@ function displayModal(index) {
     let modalHTML = `
         <img class='avatar' alt='' src='${picture.large}'/>
         <div class='modal-inner'>
-            <button id='back-button'><</button>
             <div class='text-container'>
                 <h2 class='name'>${name.first} ${name.last}</h2>
                 <p class='email'>${email}</p>
@@ -66,11 +66,11 @@ function displayModal(index) {
                 <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
                 <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
             </div>
-            <button id='forward-button'>></button>
         </div>
     `;
     overlay.classList.remove('hidden');
-    modalContainer.innerHTML = modalHTML;    
+    modalContainer.innerHTML = modalHTML;
+    currentIndex = index
 }
 
 gridContainer.addEventListener('click', e=>{
@@ -79,6 +79,7 @@ gridContainer.addEventListener('click', e=>{
     }
 });
 
-modalClose.addEventListener('click', () => {
+modalClose.addEventListener('click', (e) => {
     overlay.classList.add('hidden');
+    console.log(e.target);
 });

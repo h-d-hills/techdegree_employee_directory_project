@@ -426,7 +426,7 @@ body .overlay .modal {
   padding: 1em;
   width: calc(100% / 3);
   margin: 0 auto;
-  margin-top: 5em;
+  margin-top: 6em;
 }
 body .overlay .modal .modal-close {
   float: right;
@@ -445,11 +445,11 @@ body .overlay .modal .modal-content .modal-inner button {
   height: 2em;
   margin: auto 0;
 }
-body .overlay .modal .modal-content .modal-inner #forward-button {
+body .overlay .modal .modal-content .modal-inner .fwd-button {
   grid-area: fwd;
   margin-left: 1em;
 }
-body .overlay .modal .modal-content .modal-inner #back-button {
+body .overlay .modal .modal-content .modal-inner .bk-button {
   grid-area: back;
   margin-right: 1em;
 }

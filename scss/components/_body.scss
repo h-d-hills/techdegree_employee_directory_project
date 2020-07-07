@@ -59,7 +59,7 @@ body{
             @include card-style;
             width: calc(100% / 3);
             margin: 0 auto;
-            margin-top: 5em;
+            margin-top: 6em;
             .modal-close{
                 float: right;
             }
@@ -73,11 +73,11 @@ body{
                         height: 2em;
                         margin: auto 0;
                     }
-                    #forward-button{
+                    .fwd-button{
                         grid-area: fwd;
                         margin-left: 1em;
                     }
-                    #back-button{
+                    .bk-button{
                         grid-area: back;
                         margin-right: 1em;
                     }
