@@ -435,8 +435,27 @@ body .overlay .modal .modal-content .avatar {
   border-radius: 50%;
   margin-left: calc(50% - 4em);
 }
-body .overlay .modal .modal-content .text-container {
+body .overlay .modal .modal-content .modal-inner {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "back text fwd";
+}
+body .overlay .modal .modal-content .modal-inner button {
+  height: 2em;
+  margin: auto 0;
+}
+body .overlay .modal .modal-content .modal-inner #forward-button {
+  grid-area: fwd;
+  margin-left: 1em;
+}
+body .overlay .modal .modal-content .modal-inner #back-button {
+  grid-area: back;
+  margin-right: 1em;
+}
+body .overlay .modal .modal-content .modal-inner .text-container {
   text-align: center;
+  grid-area: text;
 }
 
 /*# sourceMappingURL=style.css.map */

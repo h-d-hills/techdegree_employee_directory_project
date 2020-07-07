@@ -55,14 +55,18 @@ function displayModal(index) {
     let date = new Date(dob.date);
     let modalHTML = `
         <img class='avatar' alt='' src='${picture.large}'/>
-        <div class='text-container'>
-            <h2 class='name'>${name.first} ${name.last}</h2>
-            <p class='email'>${email}</p>
-            <p class='address'>${city}</p>
-            <hr />
-            <p>${phone}</p>
-            <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
-            <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+        <div class='modal-inner'>
+            <button id='back-button'><</button>
+            <div class='text-container'>
+                <h2 class='name'>${name.first} ${name.last}</h2>
+                <p class='email'>${email}</p>
+                <p class='address'>${city}</p>
+                <hr />
+                <p>${phone}</p>
+                <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
+                <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+            </div>
+            <button id='forward-button'>></button>
         </div>
     `;
     overlay.classList.remove('hidden');

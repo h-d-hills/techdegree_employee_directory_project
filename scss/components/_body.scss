@@ -68,8 +68,29 @@ body{
                     border-radius: 50%;
                     margin-left: calc(50% - 4em);
                 }
-                .text-container{
-                    text-align: center;
+                .modal-inner{
+                    button{
+                        height: 2em;
+                        margin: auto 0;
+                    }
+                    #forward-button{
+                        grid-area: fwd;
+                        margin-left: 1em;
+                    }
+                    #back-button{
+                        grid-area: back;
+                        margin-right: 1em;
+                    }
+                    .text-container{
+                        text-align: center;
+                        grid-area: text;
+                    }
+                    display: grid;
+                    grid-template-columns: 1fr 8fr 1fr;
+                    grid-template-rows: auto;
+                    grid-template-areas: 
+                    'back text fwd'
+                    ;
                 }
             }
         }
