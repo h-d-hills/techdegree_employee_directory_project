@@ -396,7 +396,7 @@ body #grid-container .card {
   display: flex;
   overflow: hidden;
   margin-right: 1em;
-  border: solid 0.25em #bbb;
+  border: solid 0.125em #bbb;
   margin-bottom: 1em;
 }
 body #grid-container .card:nth-child(3n+1) {
